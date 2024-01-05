@@ -1,0 +1,44 @@
+﻿<Application x:Class="Aplikacja.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Aplikacja"
+             xmlns:viewModel="clr-namespace:Aplikacja.MVVM.ViewModel"
+             xmlns:view="clr-namespace:Aplikacja.MVVM.View"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                 <ResourceDictionary Source="Theme/MenuButtonTheme.xaml"/>
+                
+            </ResourceDictionary.MergedDictionaries>
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:MenuViewModel}">
+                <view:MenuView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:ChildrenViewModel}">
+                <view:ChildrenView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:UserViewModel}">
+                <view:UserView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:MessageViewModel}">
+                <view:MessageView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:PresenceViewModel}">
+                <view:PresenceView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
+                <view:SettingsView/>
+            </DataTemplate>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

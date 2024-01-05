@@ -1,0 +1,118 @@
+﻿<Window x:Class="Aplikacja.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacja"
+        xmlns:viewModel="clr-namespace:Aplikacja.MVVM.ViewModel"
+        mc:Ignorable="d"
+        Height="800" Width="1200"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="Transparent"
+        AllowsTransparency="True">
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <Border Background="#272537"  MouseDown="Grid_MouseDown">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="iPlacówka"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Foreground="White"
+                   FontSize="22"
+                   Margin="10,0,0,0" />
+
+            <StackPanel Grid.Row="0" 
+                        Grid.Column="1" 
+                        Height="35"
+                        Width="60"
+                        Orientation="Horizontal"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Top">
+                
+                <Button x:Name="Minimize"
+                        Content="_"
+                        Width="20"
+                        Height="20"
+                        Margin="5"
+                        Background="YellowGreen"
+                        Click="Minimize_Click"/>
+                
+                <Button x:Name="Close"
+                        Content="x"
+                        Width="20"
+                        Height="20"
+                        Background="Red"
+                        Foreground="White"
+                        Margin="5"
+                        Click="Close_Click"/>
+                
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <RadioButton Content="Główna"
+                             Height="60"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{DynamicResource MenuButtonTheme}"
+                             IsChecked="True"
+                             Command="{Binding HomeViewCommand}"/>
+                <RadioButton Content="Jadłospis"
+                             Height="60"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{DynamicResource MenuButtonTheme}"
+                             Command="{Binding MenuViewCommand}"/>
+                <RadioButton Content="Dzieci"
+                             Height="60"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{DynamicResource MenuButtonTheme}"
+                             Command="{Binding ChildrenViewCommand}"/>
+                <RadioButton Content="Użytkownicy"
+                             Height="60"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{DynamicResource MenuButtonTheme}"
+                             Command="{Binding UserViewCommand}"/>
+                <RadioButton Content="Wiadomości"
+                             Height="60"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{DynamicResource MenuButtonTheme}"
+                             Command="{Binding MessageViewCommand}"/>
+                <RadioButton Content="Obecność"
+                            Height="60"
+                            Foreground="White"
+                            FontSize="14"
+                            Style="{DynamicResource MenuButtonTheme}"
+                             Command="{Binding PresenceViewCommand}"/>
+                <RadioButton Content="Ustawienia"
+                             Height="60"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{DynamicResource MenuButtonTheme}"
+                             Command="{Binding SettingsViewCommand}"/>
+            </StackPanel>
+
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10" 
+                            Content="{Binding CurrentView}"/>
+
+        </Grid>
+
+    </Border>
+</Window>
