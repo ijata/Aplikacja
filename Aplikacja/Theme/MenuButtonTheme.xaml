@@ -4,6 +4,9 @@
            TargetType="{x:Type RadioButton}"
            x:Key="MenuButtonTheme">
         <Style.Setters>
+            <Setter Property="Cursor"
+                    Value="Hand">
+            </Setter>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="RadioButton">

@@ -18,6 +18,9 @@ namespace Aplikacja
     {
         public MainWindow()
         {
+
+
+
             InitializeComponent();
         }
 

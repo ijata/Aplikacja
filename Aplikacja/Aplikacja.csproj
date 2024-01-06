@@ -9,9 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="MVVM\Model\" />
     <Folder Include="Fonts\" />
     <Folder Include="Images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
   </ItemGroup>
 
 </Project>
