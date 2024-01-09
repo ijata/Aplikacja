@@ -8,17 +8,16 @@ using System.Threading.Tasks;
 
 namespace Aplikacja.MVVM.Model
 {
-    public class ChildrenTableSchema
+    internal class UserRelationsSchema
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int childernId { get; set; }
-        public string? childernFirstName { get; set; }
-        public string? childernLastName { get; set; }
+        internal int RelationId { get; set; }
         [Required]
-        public int groupId { get; set; }
+        internal int UserId { get; set; }
         [Required]
-        public int isActive { get; set; }
-
+        internal int ChildId { get; set; }
+        [Required]
+        internal int RelationType {  get; set; }
     }
 }

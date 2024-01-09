@@ -1,5 +1,7 @@
 ﻿using Aplikacja.MVVM.Model;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using System.IO;
 
 public class Connection : DbContext
 {
@@ -12,7 +14,16 @@ public class Connection : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        
-        optionsBuilder.UseNpgsql("Host=your_host;Port=your_port;Database=your_database;Username=your_username;Password=your_password");
+
+        IConfigurationRoot configuration = new ConfigurationBuilder()
+           .SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("Core/dbsettings.json").Build();
+
+        string? host = configuration.GetConnectionString("PostgreSQLHost");
+        string? port = configuration.GetConnectionString("PostgreSQLPort");
+        string? database = configuration.GetConnectionString("PostgreSQLDatabase");
+        string? username = configuration.GetConnectionString("PostgreSQLUsername");
+        string? password = configuration.GetConnectionString("PostgreSQLPassword");
+
+        optionsBuilder.UseNpgsql($"Host={host};Port={port};Database={database};Username={username};Password={password}");
     }
 }

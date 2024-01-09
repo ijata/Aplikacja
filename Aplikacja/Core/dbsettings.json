@@ -1,0 +1,9 @@
+{
+  "ConnectionStrings": {
+    "PostgreSQLHost": "localhost",
+    "PostgreSQLPort": "5432",
+    "PostgreSQLDatabase": "aplikacja",
+    "PostgreSQLUsername": "postgres",
+    "PostgreSQLPassword": "P05tGr3s"
+  }
+}

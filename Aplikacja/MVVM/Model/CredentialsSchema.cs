@@ -8,17 +8,12 @@ using System.Threading.Tasks;
 
 namespace Aplikacja.MVVM.Model
 {
-    public class ChildrenTableSchema
+    internal class CredentialsSchema
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int childernId { get; set; }
-        public string? childernFirstName { get; set; }
-        public string? childernLastName { get; set; }
+        internal int CredentialId { get; set; }
         [Required]
-        public int groupId { get; set; }
-        [Required]
-        public int isActive { get; set; }
-
+        internal string CredentialName { get; set;}
     }
 }
