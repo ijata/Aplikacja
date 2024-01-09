@@ -13,7 +13,7 @@
                    HorizontalAlignment="Left"
                    Margin="20,0,0,20"/>
         <StackPanel Orientation="Horizontal">
-            <Border Width="760" Height="200" Margin="20,0,20,0">
+            <Border Width="800" Height="200" Margin="20,0,20,0">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
                         <GradientStop Color="#5bc3ff" Offset="0.0" />

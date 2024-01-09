@@ -10,6 +10,9 @@ public class Connection : DbContext
     public DbSet<MessageTableSchema> Message { get; set; }
     public DbSet<PresenceTableSchema> Presence { get; set; }
     public DbSet<UserTableSchema> User { get; set; }
+    public DbSet<UserRelationsSchema> UserRelation { get; set; }
+    public DbSet<CredentialsSchema> Credentials { get; set; }
+
 
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

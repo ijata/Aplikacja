@@ -15,7 +15,12 @@
         <viewModel:MainViewModel/>
     </Window.DataContext>
 
-    <Border Background="#272537"  MouseDown="Grid_MouseDown">
+    <Border Background="#272537"  MouseDown="Grid_MouseDown"  Margin="0,0,40,40" BorderBrush="Black" BorderThickness="1">
+        <Border.Effect>
+            <DropShadowEffect/>
+        </Border.Effect>
+        
+        
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
@@ -56,7 +61,7 @@
                         Height="20"
                         Background="Red"
                         Foreground="White"
-                        Margin="5"
+                        Margin="2,5,5,5"
                         Click="Close_Click"/>
                 
             </StackPanel>

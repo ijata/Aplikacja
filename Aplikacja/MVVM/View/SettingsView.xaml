@@ -7,6 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="Ustawienia" />
+        <TextBlock Text="Ustawienia"
+            Foreground="White"
+            FontSize="28"
+            HorizontalAlignment="Left"
+            Margin="20,0,0,20"/>
     </Grid>
 </UserControl>

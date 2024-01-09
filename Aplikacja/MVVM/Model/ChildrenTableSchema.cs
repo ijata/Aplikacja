@@ -16,9 +16,11 @@ namespace Aplikacja.MVVM.Model
         public string? childernFirstName { get; set; }
         public string? childernLastName { get; set; }
         [Required]
-        public int groupId { get; set; }
-        [Required]
         public int isActive { get; set; }
+        [Required]
+        public DateTime Start {  get; set; }
+        public DateTime? End { get; set; }
+
 
     }
 }

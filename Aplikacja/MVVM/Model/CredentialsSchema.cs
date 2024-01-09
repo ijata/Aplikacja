@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Aplikacja.MVVM.Model
 {
-    internal class CredentialsSchema
+    public class CredentialsSchema
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        internal int CredentialId { get; set; }
+        public int CredentialId { get; set; }
         [Required]
-        internal string CredentialName { get; set;}
+        public string CredentialName { get; set;}
     }
 }
