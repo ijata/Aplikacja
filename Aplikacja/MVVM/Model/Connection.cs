@@ -19,7 +19,7 @@ public class Connection : DbContext
     {
 
         IConfigurationRoot configuration = new ConfigurationBuilder()
-           .SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("Core/dbsettings.json").Build();
+           .SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("C:\\Users\\IWONA\\source\\repos\\Aplikacja\\Aplikacja\\Core\\dbsettings.json").Build();
 
         string? host = configuration.GetConnectionString("PostgreSQLHost");
         string? port = configuration.GetConnectionString("PostgreSQLPort");

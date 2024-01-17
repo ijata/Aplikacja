@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Aplikacja.MVVM.Model
 {
-    public class ChildrenTableSchema
+    public class ChildrenTableSchema 
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -18,9 +18,9 @@ namespace Aplikacja.MVVM.Model
         [Required]
         public int isActive { get; set; }
         [Required]
-        public DateTime Start {  get; set; }
+        public DateTime Start { get; set; }
         public DateTime? End { get; set; }
-
-
+        
     }
 }
+
