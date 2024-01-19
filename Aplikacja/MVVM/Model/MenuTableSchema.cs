@@ -19,6 +19,6 @@ namespace Aplikacja.MVVM.Model
         public string? Posilek2 { get; set; }
         public string? Posilek3 { get; set; }
         public string? Posilek4 { get; set; }    
-        public string? Posilek5 { get; set; }  
+
     }
 }

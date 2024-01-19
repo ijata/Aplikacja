@@ -12,5 +12,10 @@
             FontSize="28"
             HorizontalAlignment="Left"
             Margin="20,0,0,20"/>
+        <TextBlock Text="Strona znajduje się w budowie"
+                   Foreground="White"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center"
+                   Margin="60"/>
     </Grid>
 </UserControl>

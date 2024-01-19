@@ -18,5 +18,7 @@ namespace Aplikacja.MVVM.Model
         public int PresenceState { get; set; }
         public string? Description { get; set; }
         public int IsAccepted { get; set; }
+
+        //public virtual ChildrenTableSchema Children {  get; set; }
     }
 }

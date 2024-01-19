@@ -20,7 +20,10 @@ namespace Aplikacja.MVVM.Model
         [Required]
         public DateTime Start { get; set; }
         public DateTime? End { get; set; }
-        
+
+        //Relacja z tabelą UserRelations
+        //public virtual UserRelationsSchema UserRelations { get; set; }
+
     }
 }
 

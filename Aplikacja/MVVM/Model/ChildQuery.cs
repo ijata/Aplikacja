@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,27 +9,32 @@ namespace Aplikacja.MVVM.Model
 {
     public class ChildQuery
     {
-        public string _test { get; set; }
+        public string childData { get; set; }
+
         public ChildQuery Get()
         {
-            String test = string.Empty;
+            String childData = string.Empty;
 
             using (var query = new Connection())
             {
 
                 var activeChildren = query.Childrens
-                    .Where(c=> c.isActive == 1)
                     .ToList();
 
-                test = String.Join(Environment.NewLine,
+                childData = String.Join(Environment.NewLine,
                     activeChildren.Select(child =>
-                        $"Name: {child.childernFirstName}, LastName: {child.childernLastName}, IsActive: {child.isActive}"));
+                        $"Imię: {child.childernFirstName} \n" +
+                        $"Nazwisko: {child.childernLastName} \n" +  
+                        $"Status: {child.isActive} \n \n"));
+
+               
             }
 
             return new ChildQuery
             {
-                _test = test
+                childData = childData
             };
         }
     }
+
 }

@@ -16,7 +16,8 @@ namespace Aplikacja.MVVM.ViewModel
         {
             _child = new ChildQuery(); 
             _child = _child.Get();
-            ChildernFirstName = _child._test;
+            ChildernFirstName = _child.childData;
+
         }
 
         public ChildQuery Child
@@ -25,22 +26,21 @@ namespace Aplikacja.MVVM.ViewModel
             set
             {
                 _child = value;
-                OnPropertyChanged(nameof(_child._test));
             }
         }
 
         #region ChildernFirstName
-        private string _childernFirstName;
-        public string ChildernFirstName
+       public string ChildernFirstName
         {
-            get { return _child._test; }
+            get { return _child.childData; }
             set
             {
-                _child._test = value;
-                OnPropertyChanged(nameof(_child._test));
+                _child.childData = value;
+                OnPropertyChanged(nameof(_child.childData));
             }
         }
         #endregion
-    }
 
+     
+    }
 }

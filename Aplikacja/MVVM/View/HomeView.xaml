@@ -12,8 +12,8 @@
                    FontSize="28"
                    HorizontalAlignment="Left"
                    Margin="20,0,0,20"/>
-        <StackPanel Orientation="Horizontal">
-            <Border Width="800" Height="200" Margin="20,0,20,0">
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Border Width="900" Height="200" Margin="20,0,20,0">
                 <Border.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
                         <GradientStop Color="#5bc3ff" Offset="0.0" />
@@ -23,7 +23,29 @@
 
                 <Grid>
                     <StackPanel>
-                        <TextBlock  Text="Treść naszego podsumowania"/>
+                        <TextBlock TextWrapping="Wrap" Margin="10,0,0,0">
+                            <Run Text="Dzisiejszy jadłospis" FontWeight="Bold"/>
+                            <LineBreak />
+                            <Run Text="{Binding menuOne}" />
+                        </TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Border Width="900" Height="200" Margin="20,0,20,0">
+                <Border.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,2">
+                        <GradientStop Color="#198c0e" Offset="0.0" />
+                        <GradientStop Color="#10540a" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Grid>
+                    <StackPanel>
+                        <TextBlock TextWrapping="Wrap" Margin="10,10,0,0">
+                            <Run Text="{Binding presenceOne}" />
+                        </TextBlock>
                     </StackPanel>
                 </Grid>
             </Border>
